@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx1:
+    image: nginx1
+    ports:
+      - "80:80"
+    volumes:
+      - /home/db/nginx:/etc/nginx
+      - /var/www/html:/usr/share/nginx/html
+    restart: always
